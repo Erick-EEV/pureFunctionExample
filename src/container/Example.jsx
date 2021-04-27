@@ -2,10 +2,27 @@ import React from 'react';
 
 const Example = () => {
 
-    let pureFunction = (input) => {
-        let outcome = input * 2
-        console.log(outcome)
-    }
+    const makeRequest = () =>
+    getJSON()
+      .then(data => {
+        console.log(data)
+        return "done"
+      })
+  
+  makeRequest()
+
+//   const makeRequest = async () => {
+//     console.log(await getJSON())
+//     return "done"
+//   }
+  
+//   makeRequest()
+
+
+      const makeRequest = async () => {
+          console.log(await getJSON())
+          return "done"
+      }
 
     return (
         <div>
